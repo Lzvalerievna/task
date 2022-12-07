@@ -1,3 +1,4 @@
+@import '../../variables';
 .App {
     position: absolute;
     top: 50%;
@@ -16,19 +17,19 @@
         display: flex;
         position: relative;
         height: 30px;
-        width: 100%;
-        border: 1px solid rgb(56, 48, 48);
+        width: 99.8%;
+        border: 1px solid $headerBorder;
         padding-bottom: 15px;
         margin-top: 198px;
-        background: rgba(black, 0.2);       
+        background: $backgroundHeader;       
 
         .AppHeaderLogo {
             display: block;
             margin: auto;
             width: 150px;
             height: 45px;
-            border-left: 1px solid rgb(56, 48, 48);
-            border-right: 1px solid rgb(56, 48, 48);
+            border-left: 1px solid $headerBorder;
+            border-right: 1px solid $headerBorder;
             margin-left: 165px;
 
             .ImageLogo {
@@ -48,7 +49,7 @@
         display: flex;
         width: 700px;
         margin-left: 180px;
-        color: white;
+        color: $colorContentMain;
 
         .ContentName {
             width: 330px;
@@ -64,7 +65,7 @@
                 display: block;
                 font-size: 28px;
                 font-weight: 600;
-                background: linear-gradient(to right, rgb(255, 252, 252), rgb(222, 98, 60), rgba(25, 3, 7)); /* Градиент для текста */
+                background: linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); /* Градиент для текста */
                 -webkit-background-clip: text; 
                 -webkit-text-fill-color: transparent; 
                 letter-spacing: 1.2px;
@@ -80,10 +81,10 @@
             }
 
             p {
-                color: rgb(152, 143, 143);
+                color: $colorP;
                 width: 80px;
                 font-size: 7px;
-                border: 2px solid rgba(81, 81, 231, 0.099);
+                border: 2px solid $backgroundBorderP;
                 padding: 3px 0px 5px 16px;
                 margin-left: -15px;
                 margin-top: 40px;

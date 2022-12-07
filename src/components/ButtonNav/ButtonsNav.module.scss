@@ -1,3 +1,4 @@
+@import '../../variables';
 .NavList {
     width: 300px;
     margin-right: 180px;
@@ -12,7 +13,7 @@
         height: 14px;
         background-color: transparent;
         border: none;
-        color: rgb(205, 184, 184);
+        color: $colorButtonHeader;
         font-size: 7px;
         cursor: pointer;
     }
@@ -20,6 +21,6 @@
 
 .NavList li button.selected {
     margin-top: 1px;
-    color: rgb(152, 143, 143);
-    border-bottom: 1px solid rgb(64, 59, 59);
+    color: $colorActive;
+    border-bottom: 1px solid $borderActive;
 }
