@@ -65,7 +65,10 @@
                 display: block;
                 font-size: 28px;
                 font-weight: 600;
-                background: linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); /* Градиент для текста */
+                background: -webkit-linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); 
+                background: -moz-linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); 
+                background: -o-linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); 
+                background: linear-gradient(to right, $gradientH1First, $gradientH1Second, $gradientH1Third); 
                 -webkit-background-clip: text; 
                 -webkit-text-fill-color: transparent; 
                 letter-spacing: 1.2px;
