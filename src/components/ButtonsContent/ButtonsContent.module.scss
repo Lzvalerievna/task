@@ -1,0 +1,123 @@
+.MainList {
+    margin-top: 54px;
+    width: 180px;
+    height: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li button {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80px;
+        height: 80px;
+        background-color: transparent;
+        border: none;
+        color: rgb(152, 143, 143);
+        font-size: 9px;
+        cursor: pointer;
+        margin-right: 5px;
+        margin-top: -30px;
+        cursor: pointer;
+  
+        .FirstLine {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .SecondLine {
+            width: 100%;
+            font-size: 24px;
+            color: white;
+            margin-top: 0.5px;
+        }
+        .ThirdLine {
+            margin-top: -15px;
+            width: 100%;
+        }
+        .Year {
+            color: white;
+            font-size: 9px;
+            margin-left: -10px;
+
+        }
+    }
+}
+.MainList li button.selected1,
+.MainList li button.selected2,
+.MainList li button.selected3,
+.MainList li button.selected4 {
+    border: 1px solid transparent;
+    .FirstLine {
+        margin-top: 5px;
+    }
+    .SecondLine {
+        margin-top: 0.5px;
+    }
+    .ThirdLine {
+        margin-top: -15px;
+    }
+
+}
+
+.MainList li button.selected1 {
+    border-image: conic-gradient(transparent, transparent, rgb(79, 80, 87), rgb(84, 86, 101, 0.2),transparent, transparent, transparent) 0.7;
+    background: linear-gradient(to right bottom, transparent , rgb(133, 116, 133, 0.150));
+    border-top: none;
+    border-Left: none;
+    margin-top: -31px;
+    
+}
+
+.MainList li button.selected2 {
+    border-image: conic-gradient(transparent, transparent, transparent, rgb(84, 86, 101, 0.2),rgb(79, 80, 87), transparent, transparent) 0.7;
+    background: linear-gradient(to left bottom, transparent, rgb(133, 116, 133, 0.150));
+    border-top: none;
+    border-right: none;
+    margin-top: -31px;
+}
+
+.MainList li button.selected3 {
+    border-image: conic-gradient(transparent, rgb(79, 80, 87), transparent,transparent,rgb(79, 80, 87),transparent, transparent) 0.7;
+    background: linear-gradient(to right top, transparent, rgb(133, 116, 133, 0.150));
+    border-bottom: none;
+    border-left: none;
+    margin-top: -31px;
+}
+
+.MainList li button.selected4 {
+    border-image: conic-gradient(transparent, transparent,rgb(84, 86, 101, 0.2),transparent, transparent, rgb(79, 80, 87), transparent) 0.7;
+    background: linear-gradient(to left top, transparent, rgb(133, 116, 133, 0.150));
+    border-bottom: none;
+    border-right: none;
+    margin-top: -31px;
+}
+
+.MainList li button.unselected1 {
+    background: linear-gradient(to right bottom, transparent , rgba(58, 52, 58, 0.2));
+    border-top: none;
+    border-Left: none;
+    margin-top: -31px;
+    
+}
+
+.MainList li button.unselected2 {
+    background: linear-gradient(to left bottom, transparent, rgba(58, 52, 58, 0.2));
+    border-top: none;
+    border-right: none;
+    margin-top: -31px;
+}
+
+.MainList li button.unselected3 {
+    background: linear-gradient(to right top, transparent, rgba(58, 52, 58, 0.2));
+    border-bottom: none;
+    border-left: none;
+    margin-top: -31px;
+}
+
+.MainList li button.unselected4 {
+    background: linear-gradient(to left top, transparent, rgba(58, 52, 58, 0.2));
+    border-bottom: none;
+    border-right: none;
+    margin-top: -31px;
+}
+
