@@ -1,0 +1,9 @@
+.card {
+    margin-bottom: 10px;
+}
+.default-link.card__link {
+    color: black;
+}
+.default-link.card__link.card__link--red {
+    color: red;
+}

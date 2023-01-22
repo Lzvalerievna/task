@@ -1,39 +1,30 @@
+import React, {useState, useEffect} from 'react';
+import CardList from '../CardList/CardList';
 
-import React, {useState} from 'react';
-import classes from './App.module.scss';
-import ButtonsNav from '../ButtonNav/ButtonsNav';
-import ButtonsContent from '../ButtonsContent/ButtonsContent';
+export default function App() {
+  console.log(1)
+  const [cards, setCards] = useState([]);
 
-function App() {
-  
-  const [battonNavActive, setButtonNavActive] = useState("Технология");
-  const [battonMain, setButtonMain] = useState(1);
+  const fetchApi = async(url) => {
+    const res = await fetch(url)
+    return res.json()
+  }
 
-  const buttonNavChange = (battonNavActive) => {
-    setButtonNavActive(battonNavActive);
-  };
-
-  const buttonMainChange = (id) => {
-    setButtonMain(id);
-  };
+  function analyticsTrackClick(url) {
+    // sending clicked link url to analytics
+    console.log(url);
+  }
+  useEffect(() => {
+    fetchApi('https://my-json-server.typicode.com/savayer/demo/posts')
+      .then(date => setCards(date))
+  },[]);
 
   return (
-    <div className ={classes.App}>
-      <div className ={classes.AppHeader}>
-        <div className={classes.AppHeaderLogo}><image className={classes.ImageLogo} alt ='logo'></image></div>
-        <ButtonsNav buttonNavChange={buttonNavChange} battonNavActive={battonNavActive}/>
-      </div>
-      <div className={classes.ContentMain}>
-        <div className={classes.ContentName}>
-          <h1>ПУТЕШЕСТВИ
-          <span>на красную планету</span>
-          </h1>
-          <p>Начать путешествие</p>
-        </div>
-        <ButtonsContent battonMain={battonMain} buttonMainChange={buttonMainChange}/>
-      </div>
+    <div>
+      <CardList cards={cards} analyticsTrackClick={analyticsTrackClick} />
     </div>
   );
 }
 
-export default App;
+
+
