@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Card from '../Card/Card';
 
-function CardList({ analyticsTrackClick, cards}) {
-  console.log(2)
-  const renderCard = cards.map((el) => <Card key={el.id} item={el} analyticsTrackClick={analyticsTrackClick}/> )
+export default function CardList() {
+  const [cards, setCards] = useState([]);
 
-  return (
-      <ul>{renderCard}</ul>
-  )
+  const fetchApi = async(url) => {
+    const res = await fetch(url);
+    return res.json();
+  };
+
+  useEffect(() => {
+    fetchApi('https://my-json-server.typicode.com/savayer/demo/posts')
+      .then(date => setCards(date));
+  },[]);
+
+  const renderCard = cards.map((el) => <Card key={el.id} item={el}/> )
+
+  return <ul>{renderCard}</ul>
+  
 }
-
-export default CardList;

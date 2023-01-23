@@ -1,8 +1,10 @@
 import React from 'react';
 import './Card.css';
 
-export default function Card({item, analyticsTrackClick}) {
-    console.log(3)
+export default function Card({item}) {
+
+    const  analyticsTrackClick = (url) => console.log(url);
+
     return (
         <div className="card">
             <div className="card__title">{item.title.en}</div>
